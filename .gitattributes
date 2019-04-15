@@ -1,2 +1,109 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+///RESEARCH PAPER///
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2003pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v0603 v9001 v9046 v9058 v9921 v4703 v4732 v4809 v4718 v4721 v4728 v1101 v9611 v4713 v4714 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2003pes_limpa.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2004pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v0603 v9001 v9046 v9058 v9921 v4703 v4732 v4809 v4718 v4721 v4728 v1101 v9611 v4713 v4714 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2004pes_limpa.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2005pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v0603 v9001 v9046 v9058 v9921 v4703 v4732 v4809 v4718 v4721 v4728 v1101 v9611 v4713 v4714 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2005pes_limpa.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2006pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v0603 v9001 v9046 v9058 v9921 v4703 v4732 v4809 v4718 v4721 v4728 v1101 v9611 v4713 v4714 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2006pes_limpa.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2003pes_limpa.dta"
+append using "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2004pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2005pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2006pes_limpa.dta"
+
+rename v0603 v6003 
+rename v4703 v4803
+rename v4714 v4814
+
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2003a2006pes_limpa.dta" file /Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2003a2006pes_limpa.dta saved
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2007pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2007pes_limpa.dta" file /Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2007pes_limpa.dta saved
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2008pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2008pes_limpa.dta" 
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2009pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2009pes_limpa.dta" 
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2011pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2011pes_limpa.dta" 
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2012pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2012pes_limpa.dta" 
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2013pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2013pes_limpa.dta" 
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2014pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2014pes_limpa.dta" 
+
+use "/Users/isabelafreire/Desktop/GSE/PNAD/pnad2015pes.dta"
+keep v0101 uf v0102 v0103 v0301 v0302 v8005 v0401 v0403 v0404 v0406 v0407 v0602 v6002 v6003 v9001 v9046 v9058 v9921 v4803 v4809 v4732 v4718 v4721 v4728 v1101 v9611 v4713 v4814 v4706 id_dom
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2015pes_limpa.dta" 
+
+use "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2007pes_limpa.dta" 
+append using "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2008pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2009pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2011pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2012pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2013pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2014pes_limpa.dta" "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2015pes_limpa.dta"  
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2007a2015.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2003a2006pes_limpa.dta"
+append using "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/raw_data/pnad2007a2015.dta"
+rename v0302 gender
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/pnad2003a2015pes_limpa.dta"
+
+keep if gender == 4 ///for females only///
+rename v0403 family_number
+rename v0101 year
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/base_mulheres.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/pnad2003a2015pes_limpa.dta"
+keep if v0401==3 ///for children only///
+gen goestoschool =v0602==2 ///dummy for attending school///
+gen age0to3 = v8005 <=3
+gen age4 = v8005==4
+gen age5 =v8005==5
+gen age4to5 = age4+age5
+drop age4 age5
+gen age6 = v8005==6
+gen age7 = v8005==7
+gen age6to7 = age6+age7
+gen age8more = v8005 >=8
+gen age0to3_school = age0to3*goestoschool
+gen age4to5_school = age4to5*goestoschool
+gen age6to7_school = age6to7*goestoschool
+gen age8more_school = age8more*goestoschool
+rename v0101 year
+rename v0403 family_number
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/base_filhos_idade_escola.dta", replace
+
+collapse (sum) age0to3 age4to5 age6to7 age8more age0to3_school age4to5_school age6to7_school age8more_school, by (year id_dom family_number)
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/base_filhos_colapse.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/base_mulheres.dta"
+merge m:m id_dom using "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/base_filhos_colapse.dta"
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/base_mulheres_filhos.dta"
+
+use "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/pnad2003a2015pes_limpa.dta"
+keep v4721 v0301 v4732 v0403 id_dom v0101 uf ///for domiciliar income///
+rename v0101 year
+rename v0403 family_number
+save "/Users/isabelafreire/Desktop/GSE/ResearchPaper/Data_Analysis/data/clean_data/base_renda.dta"
+
+
+
+
